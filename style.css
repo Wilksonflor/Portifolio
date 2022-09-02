@@ -213,7 +213,6 @@ li a:hover::after {
   width: 100%;
   max-width: 1200px;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
@@ -227,6 +226,7 @@ li a:hover::after {
 }
 #sectionProjetos .containerProjetos {
   /* border: 2px solid #fff; */
+  width: 100%;
   margin-bottom: 40px;
   gap: 40px;
   display: flex;
@@ -269,4 +269,42 @@ li a:hover::after {
   font-size: 1.4rem;
   font-weight: 400;
   color: #828282;
+}
+/* ------------------- */
+
+#sectionSkills{
+  margin-top: 100px;
+  width: 100%;
+  color: #fff;
+}
+#sectionSkills h2{
+  font-family: 'DM Sans';
+font-weight: 700;
+font-size: 32px;
+  text-align: center;
+}
+.skills{
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  font-size: 20px;
+  width: 100%;
+
+}
+.cardSkills{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #212121;
+  border-radius: 5px;
+  width: 150px;
+  height: 150px;
+
+}
+.cardSkills i{
+  font-size: 8rem;
+  color: var(--colorgreen--);
 }
