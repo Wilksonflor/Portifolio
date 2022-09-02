@@ -43,9 +43,8 @@ nav {
   font-size: clamp(1.4rem, 3vw, 2.6rem);
 }
 ul {
-  width: 50%;
+  width: 40%;
   margin-right: 20px;
-
   display: flex;
   align-items: center;
   gap: 45px;
@@ -200,4 +199,69 @@ li a:hover::after {
 #sectionSocials .sociaisBg i {
   font-size: 3.2rem;
   color: var(--colorgreen--);
+}
+/* fim da section sobre redes sociais */
+
+#sectionProjetos {
+  border: 4px solid red;
+  margin-top: 125px;
+  margin-inline: auto;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+#sectionProjetos h2 {
+  color: var(--colorFonts--);
+  font-size: 3.2rem;
+  font-weight: 700;
+  text-align: center;
+}
+#sectionProjetos .containerProjetos {
+  border: 2px solid #fff;
+  margin-bottom: 40px;
+  gap: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#sectionProjetos .cardProjetos {
+  /* border: 4px solid yellow; */
+  background-color: #212121;
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  height: 240px;
+}
+#sectionProjetos .cardProjetos .imgCard {
+  /* border: 4px solid brown; */
+  background-color: #171717;
+  margin-top: 20px;
+  margin-inline: auto;
+  width: 300px;
+  height: 130px;
+}
+#sectionProjetos .cardProjetos .textCard {
+  /* border: 2px solid green; */
+  margin-top: 25px;
+  margin-left: 15px;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+#sectionProjetos .cardProjetos .textCard h3 {
+  color: var(--colorFonts--);
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+#sectionProjetos .cardProjetos .textCard p {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #828282;
 }
