@@ -180,18 +180,21 @@ li a:hover::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 190px;
+  flex-direction: column;
   width: 80%;
   margin: 0 auto;
-  height: 100px;
   color: #fff;
+}
+#sectionSocials > h2{
+  color: var(--colorFonts--);
+  font-size: clamp(2.4rem,3vw,3.6rem);
 }
 #sectionSocials .containerSociais {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  margin-block: 100px;
+  margin-block: 50px;
   margin-inline: 10px;
   gap: 10px;
   width: 100%;
@@ -398,9 +401,9 @@ footer {
   }
 
   #sectionSocials .containerSociais {
-    margin-inline: 20px;
+    /* margin-inline: 20px;
     margin-top: 150px;
-    margin-bottom: 100px;
+    margin-bottom: 100px; */
   }
   #sectionSocials .containerSociais .sociais {
     width: 100%;
@@ -408,7 +411,7 @@ footer {
     margin-block: 10px;
   }
   #sectionProjetos {
-    margin-top: 200px;
+    /* margin-top: 200px; */
   }
   #sectionProjetos .cardProjetos {
     width: 90%;
