@@ -37,7 +37,7 @@ nav {
   align-items: center;
   justify-content: space-between;
 }
-.navMobile{
+.navMobile {
   border: none;
   display: none;
 }
@@ -96,6 +96,7 @@ li a:hover::after {
   font-size: clamp(2.4rem, 3vw, 3.6rem);
 }
 .textMe p {
+  font-size: clamp(1.6rem, 2vw, 1.8rem);
   margin-block: 10px;
 }
 .textImg {
@@ -114,6 +115,8 @@ li a:hover::after {
 }
 #btnCv a {
   font-family: var(--fonttittle--);
+  font-size: clamp(1.2rem, 2vw, 1.4rem);
+  font-weight: 500;
   color: #000;
   font-weight: 500;
 }
@@ -132,6 +135,8 @@ li a:hover::after {
   border: none;
 }
 #btnContato a {
+  font-size: clamp(1.2rem, 2vw, 1.4rem);
+  font-weight: 500;
   color: var(--colorFonts--);
 }
 #btnContato:hover {
@@ -152,14 +157,14 @@ li a:hover::after {
   height: 200px;
 }
 #sectionSobre h2 {
-  font-size: 3.2rem;
+  font-size: clamp(2.4rem, 3vw, 3.2rem);
   text-align: center;
   margin-bottom: 12px;
   font-weight: 700;
 }
 #sectionSobre p {
   font-weight: 400;
-  font-size: 1.8rem;
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
   color: #828282;
   text-align: center;
 }
@@ -173,6 +178,17 @@ li a:hover::after {
   margin: 0 auto;
   height: 100px;
   color: #fff;
+}
+#sectionSocials .containerSociais {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-block: 100px;
+  margin-inline: 10px;
+  gap: 10px;
+  width: 100%;
+  height: auto;
 }
 #sectionSocials .sociaisBg {
   display: flex;
@@ -192,13 +208,17 @@ li a:hover::after {
 }
 #sectionSocials .sociais h4 {
   color: var(--colorFonts--);
-  font-size: 1.8rem;
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
 }
 #sectionSocials .sociais a {
   color: #828282;
-  font-size: 1.6rem;
+  font-size: clamp(1rem, 3vw, 1.6rem);
   font-family: var(--fontSizeParagraph--);
   font-weight: 400;
+}
+#sectionSocials .sociais i:hover {
+  font-size: 3.4rem;
+  transition: 0.2s;
 }
 #sectionSocials .sociaisBg i {
   font-size: 3.2rem;
@@ -250,11 +270,12 @@ li a:hover::after {
   margin-inline: auto;
   width: 300px;
   height: 130px;
-}#sectionProjetos .cardProjetos .imgCard #jordan{
+}
+#sectionProjetos .cardProjetos .imgCard #jordan {
   width: 100%;
   height: 100%;
 }
-#sectionProjetos .cardProjetos .imgCard #imc{
+#sectionProjetos .cardProjetos .imgCard #imc {
   width: 100%;
   height: 100%;
 }
@@ -270,28 +291,28 @@ li a:hover::after {
 }
 #sectionProjetos .cardProjetos .textCard h3 {
   color: var(--colorFonts--);
-  font-size: 1.8rem;
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
   font-weight: 500;
 }
 #sectionProjetos .cardProjetos .textCard p {
-  font-size: 1.4rem;
+  font-size: clamp(1rem, 3vw, 1.4rem);
   font-weight: 400;
   color: #828282;
 }
 /* ------------------- */
 
-#sectionSkills{
+#sectionSkills {
   margin-top: 100px;
   width: 100%;
   color: #fff;
 }
-#sectionSkills h2{
+#sectionSkills h2 {
   font-family: 'DM Sans';
-font-weight: 700;
-font-size: 32px;
+  font-weight: 700;
+  font-size: 32px;
   text-align: center;
 }
-.skills{
+.skills {
   margin-top: 50px;
   display: flex;
   align-items: center;
@@ -300,9 +321,8 @@ font-size: 32px;
   gap: 50px;
   font-size: 20px;
   width: 100%;
-
 }
-.cardSkills{
+.cardSkills {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -310,16 +330,84 @@ font-size: 32px;
   border-radius: 5px;
   width: 150px;
   height: 150px;
-
 }
-.cardSkills i{
+.cardSkills i {
   font-size: 8rem;
   color: var(--colorgreen--);
 }
 
-footer{
+footer {
   background-color: #212121;
   margin-top: 180px;
   text-align: center;
   color: var(--colorFonts--);
+}
+
+/* responsividade */
+
+@media only screen and (max-width: 320px) {
+  header #logo {
+    margin-left: 20px;
+  }
+  nav {
+    display: none;
+  }
+  .textMe {
+    width: 100%;
+    margin-inline: 20px;
+  }
+  #imgDeveloper,
+  .textImg {
+    display: none;
+  }
+  #emoticon {
+    display: none;
+  }
+  .btnMain {
+    display: flex;
+    gap: 2px;
+  }
+  .btnMain #btnCv {
+    width: 130px;
+    height: 30px;
+  }
+  .btnMain #btnContato {
+    width: 130px;
+    height: 30px;
+    margin-left: 0;
+  }
+  #sectionSobre {
+    margin-top: 60px;
+    width: 95%;
+    text-align: center;
+  }
+  #sectionSocials {
+    gap: 5px;
+    width: 100%;
+  }
+
+  #sectionSocials .containerSociais {
+    margin-inline: 20px;
+    margin-top: 120px;
+  }
+  #sectionSocials .containerSociais .sociais {
+    width: 100%;
+    flex-wrap: wrap;
+    margin-block: 10px;
+  }
+  #sectionProjetos {
+    margin-top: 200px;
+  }
+  #sectionProjetos .cardProjetos {
+    width: 90%;
+  }
+  #sectionProjetos .cardProjetos .imgCard {
+    width: 85%;
+  }
+  #sectionProjetos .cardProjetos .textCard {
+    margin-left: 10px;
+  }
+  #sectionProjetos .cardProjetos img {
+    width: 100%;
+  }
 }
