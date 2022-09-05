@@ -43,6 +43,9 @@ nav {
   justify-content: flex-end;
 }
 .navMobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: none;
   display: none;
 }
@@ -359,12 +362,9 @@ footer {
 
 /* responsividade */
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 360px) {
   header #logo {
     margin-left: 20px;
-  }
-  nav {
-    display: none;
   }
   .textMe {
     width: 100%;
@@ -427,3 +427,47 @@ footer {
   }
   #sectionProjetos .cardProjetos img {
     width: 100%;
+  }
+}
+
+
+/* tela máxima de 480 px */
+@media only screen and (max-width: 480px){
+  .textImg{
+    display: none;
+  }
+  .textMe{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  #sectionSobre{
+  margin-block: 100px;
+  width: 96%;
+  }
+
+}
+
+
+
+
+@media only screen and (max-width: 768px){
+  nav{
+    width: 60%;
+  }
+.btnMobile{
+  align-items: center;
+  height: auto;
+}
+.btnMobile i{
+  text-align: center;
+  cursor: pointer;
+  font-size: 2.4rem;
+  color: var(--colorFonts--);
+  align-items: center;
+}
+#listDesktop{
+  display: none;
+}
+
+}
