@@ -25,18 +25,17 @@ p {
   font-size: 1.8rem;
 }
 header {
-
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin-top: 20px;
   width: 100%;
-
 }
-header .logoMain{
+header .logoMain {
   padding: 0;
 }
 nav {
-  width: 80%;
+  /* width: 80%; */
   height: auto;
   display: flex;
   align-items: center;
@@ -55,9 +54,8 @@ nav {
   font-size: clamp(1.4rem, 3vw, 2.6rem);
 }
 ul {
-
-  width: 50%;
-  margin-right: 20px;
+  width: 100%;
+  margin-right: 50px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -67,7 +65,6 @@ li a {
   font-size: var(--fontSizeParagraph--);
   color: var(--colorFonts--);
   position: relative;
-
 }
 /* parte para poder ficar a linha a baixo do menu */
 li a:hover {
@@ -97,7 +94,7 @@ li a:hover::after {
 }
 .textMe {
   text-align: justify;
-  width: 30%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -188,9 +185,9 @@ li a:hover::after {
   margin: 0 auto;
   color: #fff;
 }
-#sectionSocials > h2{
+#sectionSocials > h2 {
   color: var(--colorFonts--);
-  font-size: clamp(2.4rem,3vw,3.6rem);
+  font-size: clamp(2.4rem, 3vw, 3.6rem);
 }
 #sectionSocials .containerSociais {
   display: flex;
@@ -348,7 +345,7 @@ li a:hover::after {
   font-size: 8rem;
   color: var(--colorgreen--);
 }
-.cardSkills i:hover{
+.cardSkills i:hover {
   font-size: 10rem;
   transition: 0.2s;
 }
@@ -362,13 +359,15 @@ footer {
 
 /* responsividade */
 
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 375px) {
   header #logo {
     margin-left: 20px;
   }
+  #sectionTitle {
+    width: 100%;
+  }
   .textMe {
     width: 100%;
-    margin-inline: 20px;
   }
   #imgDeveloper,
   .textImg {
@@ -419,6 +418,10 @@ footer {
   #sectionProjetos .cardProjetos .imgCard {
     width: 85%;
   }
+  #sectionProjetos .cardProjetos img {
+    width: 100%;
+    height: auto;
+  }
   #sectionProjetos .cardProjetos .textCard {
     height: auto;
     align-items: flex-start;
@@ -430,69 +433,90 @@ footer {
   }
 }
 
-
 /* tela máxima de 480 px */
-@media only screen and (max-width: 480px){
-  .textImg{
+@media only screen and (max-width: 480px) {
+  .textImg {
     display: none;
   }
-  .textMe{
+  .textMe {
     width: 100%;
     align-items: center;
     justify-content: center;
   }
-  #sectionSobre{
-  margin-block: 100px;
-  width: 96%;
+  #sectionSobre {
+    margin-block: 100px;
+    width: 96%;
   }
-
 }
 
-
-
-
-@media only screen and (max-width: 768px){
-  header{
+@media only screen and (max-width: 768px) {
+  header {
     position: fixed;
     top: 0;
     left: 0;
   }
-  nav{
+  nav {
     width: 60%;
-
   }
-  nav #listDesktop{
-position: fixed;
-top: 80px;
-left: -100%;
-height: 100vh;
-width: 100vw;
-display: block;
-text-align: center;
-background-color: #171717;
-transition: all 0.3s ease;
+  nav #listDesktop {
+    position: fixed;
+    top: 80px;
+    left: 100%;
+    height: 100vh;
+    width: 100vw;
+    display: block;
+    text-align: center;
+    background-color: #171717;
+    transition: all 0.3s ease;
   }
-  nav #listDesktop.open{
+  nav #listDesktop.open {
+    width: 100%;
     left: 0;
   }
-  nav #listDesktop li{
+  nav #listDesktop li {
     width: 100%;
     margin: 50px 0;
   }
-.btnMobile{
-  align-items: center;
-  height: auto;
+  #sectionTitle {
+    margin-inline: auto;
+    width: 100%;
+  }
+  .textMe {
+    width: 100%;
+    margin-left: 55px;
+  }
+  .textImg {
+    display: none;
+  }
+  #imgDeveloper {
+    display: none;
+  }
+  .btnMobile {
+    margin-right: 30px;
+    align-items: center;
+    height: auto;
+  }
+
+  .btnMobile i {
+    text-align: center;
+    cursor: pointer;
+    font-size: 2.4rem;
+    color: var(--colorFonts--);
+    align-items: center;
+  }
+  #listDesktop {
+    display: none;
+  }
+  #sectionSobre {
+    width: 99%;
+  }
+  #sectionProjetos .containerProjetos {
+    margin-inline: 5px;
+  }
 }
 
-.btnMobile i{
-  text-align: center;
-  cursor: pointer;
-  font-size: 2.4rem;
-  color: var(--colorFonts--);
-  align-items: center;
-}
-#listDesktop{
-  display: none;
-}
-
+@media only screen and (max-width: 820) {
+  #sectionTitle {
+    border: 4px solid red;
+  }
 }
